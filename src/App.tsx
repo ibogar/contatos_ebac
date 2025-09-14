@@ -1,5 +1,18 @@
+import SearchBar from './containers/Searchbar'
+import GlobalStyle, { Body, Container, SearchContainer } from './styles'
+
 function App() {
-  return <div> oi</div>
+  return (
+    <>
+      <GlobalStyle />
+      <SearchContainer>
+        <Container>
+          <SearchBar />
+        </Container>
+      </SearchContainer>
+      <Body></Body>
+    </>
+  )
 }
 
 export default App
