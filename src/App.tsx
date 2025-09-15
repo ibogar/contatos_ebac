@@ -1,3 +1,4 @@
+import ContactCard from './components/ContactCard'
 import SearchBar from './containers/Searchbar'
 import GlobalStyle, { Body, Container, SearchContainer } from './styles'
 
@@ -10,7 +11,11 @@ function App() {
           <SearchBar />
         </Container>
       </SearchContainer>
-      <Body></Body>
+      <Body>
+        <ContactCard />
+        <ContactCard />
+        <ContactCard />
+      </Body>
     </>
   )
 }

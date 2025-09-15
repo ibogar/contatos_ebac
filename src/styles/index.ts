@@ -18,16 +18,30 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
 `
 
 export const SearchContainer = styled.div`
   background-color: #2e2e61;
-  height: 300px;
+  height: 30vh;
 `
 
 export const Body = styled.div`
   background-color: ${variables.mainColor};
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  padding: 30px 150px;
+  overflow-y: scroll;
+`
+
+export const Button = styled.button`
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
 `
 
 export default GlobalStyle

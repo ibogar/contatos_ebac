@@ -5,6 +5,7 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
+  margin-top: 54px;
 
   div {
     display: flex;
@@ -45,7 +46,8 @@ export const Select = styled.select`
   font-size: 16px;
   cursor: pointer;
 
-  &:focus {
+  &:focus,
+  &:hover {
     outline: none;
     border-color: ${variables.textColor};
     box-shadow: 0 0 0 2px rgba(192, 105, 12, 0.3);
