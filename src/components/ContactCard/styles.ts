@@ -44,12 +44,16 @@ export const ActionsContainer = styled.div`
   gap: 10px;
 `
 
-export const DeleteBtn = styled(Button)`
+export const DangerBtn = styled(Button)`
   background-color: ${variables.dangerColor};
   color: ${variables.mainColor};
 `
 
 export const EditBtn = styled(Button)`
   background-color: ${variables.neutralColor};
+  color: ${variables.mainColor};
+`
+export const PositiveBtn = styled(Button)`
+  background-color: ${variables.positiveColor};
   color: ${variables.mainColor};
 `
