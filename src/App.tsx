@@ -1,4 +1,5 @@
 import ContactCard from './components/ContactCard'
+import ContactsTable from './containers/ContactsTable'
 import SearchBar from './containers/Searchbar'
 import GlobalStyle, { Body, Container, SearchContainer } from './styles'
 
@@ -12,9 +13,7 @@ function App() {
         </Container>
       </SearchContainer>
       <Body>
-        <ContactCard />
-        <ContactCard />
-        <ContactCard />
+        <ContactsTable />
       </Body>
     </>
   )

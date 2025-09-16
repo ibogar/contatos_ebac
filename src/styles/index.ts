@@ -31,7 +31,7 @@ export const Body = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 5px;
-  padding: 30px 150px;
+  padding: 4vh 10vw;
   overflow-y: scroll;
 `
 

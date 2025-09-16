@@ -1,6 +1,14 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import variables from '../../styles/variables'
 import { Button } from '../../styles'
+
+const sharedTextarea = css`
+  background: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  resize: none;
+`
 
 export const Card = styled.div`
   width: 100%;
@@ -13,16 +21,18 @@ export const Card = styled.div`
   position: relative;
 `
 
-export const Name = styled.h3`
+export const Name = styled.textarea`
+  ${sharedTextarea};
   font-size: 32px;
   font-weight: bold;
 `
-export const Tel = styled.p`
+export const Tel = styled.textarea`
+  ${sharedTextarea};
   font-size: 16px;
-  padding: 1vh 0;
 `
 
-export const Email = styled.p`
+export const Email = styled.textarea`
+  ${sharedTextarea};
   font-size: 16px;
 `
 
