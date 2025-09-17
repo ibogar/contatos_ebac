@@ -2,12 +2,14 @@ import styled, { css } from 'styled-components'
 import variables from '../../styles/variables'
 import { Button } from '../../styles'
 
-const sharedTextarea = css`
+const sharedInput = css`
   background: inherit;
   color: inherit;
   border: none;
   outline: none;
-  resize: none;
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 10px;
 `
 
 export const Card = styled.div`
@@ -21,19 +23,24 @@ export const Card = styled.div`
   position: relative;
 `
 
-export const Name = styled.textarea`
-  ${sharedTextarea};
-  font-size: 32px;
-  font-weight: bold;
-`
-export const Tel = styled.textarea`
-  ${sharedTextarea};
-  font-size: 16px;
+export const Title = styled.label`
+  font-size: 12px;
+  font-style: italic;
+  cursor: pointer;
 `
 
-export const Email = styled.textarea`
-  ${sharedTextarea};
-  font-size: 16px;
+export const Name = styled.input`
+  ${sharedInput};
+  font-size: 24px;
+`
+export const Tel = styled.input`
+  ${sharedInput};
+  font-size: 12px;
+`
+
+export const Email = styled.input`
+  ${sharedInput};
+  font-size: 12px;
 `
 
 export const ActionsContainer = styled.div`

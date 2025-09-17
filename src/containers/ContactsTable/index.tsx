@@ -6,13 +6,13 @@ const ContactsTable = () => {
   const { items } = useSelector((state: RootReducer) => state.contacts)
   return (
     <>
-      {items.map((t) => (
+      {items.map((c) => (
         <ContactCard
-          key={t.id}
-          id={t.id}
-          name={t.name}
-          telephone={t.telephone}
-          email={t.email}
+          key={c.id}
+          id={c.id}
+          name={c.name}
+          telephone={c.telephone ? c.telephone : ' '}
+          email={c.email ? c.email : ' '}
         />
       ))}
     </>

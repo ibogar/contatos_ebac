@@ -56,20 +56,29 @@ const ContactCard = ({
 
   return (
     <S.Card>
+      <S.Title htmlFor={name}>Nome</S.Title>
       <S.Name
+        id={name}
+        type="text"
         disabled={!editing}
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <S.Tel
-        disabled={!editing}
-        value={telephone}
-        onChange={(e) => setTelephone(e.target.value)}
-      />
+      <S.Title htmlFor={email}>E-mail</S.Title>
       <S.Email
+        id={email}
+        type="email"
         disabled={!editing}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+      />
+      <S.Title htmlFor={telephone}>Telefone</S.Title>
+      <S.Tel
+        id={telephone}
+        type="tel"
+        disabled={!editing}
+        value={telephone}
+        onChange={(e) => setTelephone(e.target.value)}
       />
       {editing ? (
         <S.ActionsContainer>
