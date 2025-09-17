@@ -10,6 +10,7 @@ const initialState: ContactState = {
     {
       id: 1,
       name: 'Iuri',
+      telephone: '12 1234-1234',
       email: 'iuri@example.com'
     },
     {
@@ -45,10 +46,13 @@ const contactsSlice = createSlice({
       if (contactIndex >= 0) {
         state.items[contactIndex] = action.payload
       }
+    },
+    remove: (state, action: PayloadAction<number>) => {
+      state.items = state.items.filter((task) => task.id !== action.payload)
     }
   }
 })
 
-export const { edit } = contactsSlice.actions
+export const { edit, remove } = contactsSlice.actions
 
 export default contactsSlice.reducer

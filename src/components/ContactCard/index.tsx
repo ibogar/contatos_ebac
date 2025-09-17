@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
 import * as S from './styles'
-import { edit } from '../../store/reducers/contacts'
+import { edit, remove } from '../../store/reducers/contacts'
 import ContactClass from '../../models/Contact'
 
 type Props = ContactClass
@@ -88,7 +88,7 @@ const ContactCard = ({
       ) : (
         <S.ActionsContainer>
           <S.EditBtn onClick={() => setEditing(true)}>Editar</S.EditBtn>
-          <S.DangerBtn>Apagar</S.DangerBtn>
+          <S.DangerBtn onClick={() => dispatch(remove(id))}>Apagar</S.DangerBtn>
         </S.ActionsContainer>
       )}
     </S.Card>
