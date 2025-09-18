@@ -12,30 +12,6 @@ export const InputContainer = styled.div`
   }
 `
 
-export const Label = styled.label`
-  color: ${variables.textColor};
-  font-weight: bold;
-  font-size: 20px;
-`
-
-export const SearchInput = styled.input`
-  flex: 1;
-  margin-top: 20px;
-  margin-right: 10px;
-  padding: 10px 14px;
-  border: 1px solid ${variables.mainColor};
-  border-radius: 10px;
-  background-color: ${variables.mainColor};
-  color: ${variables.textColor};
-  font-size: 16px;
-
-  &:focus {
-    outline: none;
-    border-color: ${variables.textColor};
-    box-shadow: 0 0 0 2px rgba(192, 105, 12, 0.3);
-  }
-`
-
 export const Select = styled.select`
   margin-top: 20px;
   padding: 10px 14px;

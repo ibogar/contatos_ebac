@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components'
 import variables from '../../styles/variables'
-import { Button } from '../../styles'
 
 const sharedInput = css`
   background: inherit;
@@ -23,12 +22,6 @@ export const Card = styled.div`
   position: relative;
 `
 
-export const Title = styled.label`
-  font-size: 12px;
-  font-style: italic;
-  cursor: pointer;
-`
-
 export const Name = styled.input`
   ${sharedInput};
   font-size: 24px;
@@ -41,26 +34,4 @@ export const Tel = styled.input`
 export const Email = styled.input`
   ${sharedInput};
   font-size: 12px;
-`
-
-export const ActionsContainer = styled.div`
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  display: flex;
-  gap: 10px;
-`
-
-export const DangerBtn = styled(Button)`
-  background-color: ${variables.dangerColor};
-  color: ${variables.mainColor};
-`
-
-export const EditBtn = styled(Button)`
-  background-color: ${variables.neutralColor};
-  color: ${variables.mainColor};
-`
-export const PositiveBtn = styled(Button)`
-  background-color: ${variables.positiveColor};
-  color: ${variables.mainColor};
 `

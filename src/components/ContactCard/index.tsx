@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import * as S from './styles'
 import { edit, remove } from '../../store/reducers/contacts'
 import ContactClass from '../../models/Contact'
+import * as G from '../../styles'
 
 type Props = ContactClass
 
@@ -56,7 +57,7 @@ const ContactCard = ({
 
   return (
     <S.Card>
-      <S.Title htmlFor={name}>Nome</S.Title>
+      <G.Label htmlFor={name}>Nome</G.Label>
       <S.Name
         id={name}
         type="text"
@@ -64,7 +65,7 @@ const ContactCard = ({
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
-      <S.Title htmlFor={email}>E-mail</S.Title>
+      <G.Label htmlFor={email}>E-mail</G.Label>
       <S.Email
         id={email}
         type="email"
@@ -72,7 +73,7 @@ const ContactCard = ({
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <S.Title htmlFor={telephone}>Telefone</S.Title>
+      <G.Label htmlFor={telephone}>Telefone</G.Label>
       <S.Tel
         id={telephone}
         type="tel"
@@ -81,15 +82,15 @@ const ContactCard = ({
         onChange={(e) => setTelephone(e.target.value)}
       />
       {editing ? (
-        <S.ActionsContainer>
-          <S.PositiveBtn onClick={saveEdit}>Salvar</S.PositiveBtn>
-          <S.DangerBtn onClick={cancelEdit}>Cancelar</S.DangerBtn>
-        </S.ActionsContainer>
+        <G.ActionsContainer>
+          <G.PositiveBtn onClick={saveEdit}>Salvar</G.PositiveBtn>
+          <G.DangerBtn onClick={cancelEdit}>Cancelar</G.DangerBtn>
+        </G.ActionsContainer>
       ) : (
-        <S.ActionsContainer>
-          <S.EditBtn onClick={() => setEditing(true)}>Editar</S.EditBtn>
-          <S.DangerBtn onClick={() => dispatch(remove(id))}>Apagar</S.DangerBtn>
-        </S.ActionsContainer>
+        <G.ActionsContainer>
+          <G.EditBtn onClick={() => setEditing(true)}>Editar</G.EditBtn>
+          <G.DangerBtn onClick={() => dispatch(remove(id))}>Apagar</G.DangerBtn>
+        </G.ActionsContainer>
       )}
     </S.Card>
   )

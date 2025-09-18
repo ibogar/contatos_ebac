@@ -9,7 +9,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: Roboto, sans-serif;
     list-style: none;
     }
-    `
+
+  body {
+    background-color: ${variables.mainColor};
+  }
+`
 
 export const Container = styled.div`
   width: 60%;
@@ -21,7 +25,7 @@ export const Container = styled.div`
 `
 
 export const SearchContainer = styled.div`
-  background-color: #2e2e61;
+  background-color: ${variables.highlightMainClr};
   height: 30vh;
 `
 
@@ -42,6 +46,58 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   border-radius: 8px;
+`
+
+export const DangerBtn = styled(Button)`
+  background-color: ${variables.dangerColor};
+  color: ${variables.mainColor};
+`
+
+export const EditBtn = styled(Button)`
+  background-color: ${variables.neutralColor};
+  color: ${variables.mainColor};
+`
+export const PositiveBtn = styled(Button)`
+  background-color: ${variables.positiveColor};
+  color: ${variables.mainColor};
+`
+export const ActionsContainer = styled.div`
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: flex;
+  gap: 10px;
+`
+
+export const Title = styled.h1`
+  color: ${variables.textColor};
+  font-weight: bold;
+  font-size: 20px;
+`
+
+export const Label = styled.label`
+  font-size: 12px;
+  font-style: italic;
+  cursor: pointer;
+`
+
+export const Input = styled.input`
+  flex: 1;
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 10px 14px;
+  border: 1px solid ${variables.mainColor};
+  border-radius: 10px;
+  background-color: ${variables.mainColor};
+  color: ${variables.textColor};
+  font-size: 16px;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: ${variables.textColor};
+    box-shadow: 0 0 0 2px rgba(192, 105, 12, 0.3);
+  }
 `
 
 export default GlobalStyle

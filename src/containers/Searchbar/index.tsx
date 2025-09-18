@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { InputContainer, Label, SearchInput, Select } from './styles'
+import * as S from './styles'
 import { setQuery, setType } from '../../store/reducers/filter'
 import { RootReducer } from '../../store'
+import { Input, Title } from '../../styles'
 
 const SearchBar = () => {
   const dispatch = useDispatch()
@@ -9,21 +10,21 @@ const SearchBar = () => {
 
   return (
     <>
-      <InputContainer>
-        <Label>Buscar contato:</Label>
+      <S.InputContainer>
+        <Title>Buscar contato:</Title>
         <div>
-          <SearchInput
+          <Input
             type="text"
             value={searchQuery}
             onChange={(e) => dispatch(setQuery(e.target.value))}
           />
-          <Select onChange={(e) => dispatch(setType(e.target.value))}>
+          <S.Select onChange={(e) => dispatch(setType(e.target.value))}>
             <option value="name">Nome</option>
             <option value="telephone">Telefone</option>
             <option value="email">E-mail</option>
-          </Select>
+          </S.Select>
         </div>
-      </InputContainer>
+      </S.InputContainer>
     </>
   )
 }

@@ -1,5 +1,7 @@
+import AddContactForm from '../../containers/AddContactForm'
+
 const NewContact = () => {
-  return <div>novo</div>
+  return <AddContactForm />
 }
 
 export default NewContact

@@ -27,7 +27,7 @@ const initialState: ContactState = {
     },
     {
       id: 4,
-      name: 'NotJohn',
+      name: 'John',
       telephone: '555 0134',
       email: 'notjohn@example.com'
     },
